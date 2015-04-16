@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="js, memory, game, leaderboard">
+    <meta name="description" content="A JS Memory Game for Accedo.tv by Dale Foo">
+    <title>Color Memory | Dale Foo</title>
+
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="css/style.css">
+
+  </head>
+  <body>
+    <div id="content">      
+      <div id="logo-img"></div>
+
+      <div id="instructions">
+        <p>Use the arrow keys to move to your tile.</p>
+        <p>Press Enter to select it.</p>
+        <p>Tab will move to the start/ restart button</p>
+        <p>Remember a lower score is better!</p>
+      </div>
+
+      <div id="game-info">
+        <table id="leaderboardTable">
+          <tr class="header">
+            <th>Player</th>
+            <th>Score</th>
+          </tr>
+        </table>
+        <form id="tablescore" name="tablescore" action="#">
+          <div>
+            <label><span>Your Score</span></label>
+            <input type="text" value="0" id="score" readonly="readonly">
+            <input id="playButton" type="button" value="Play">
+          </div>
+        </form>
+      </div>
+
+      <canvas id="canvas" tabindex="1" width="450" height="550">
+        <span>No canvas support</span>
+      </canvas>
+
+      <div id="msg"></div>
+
+      <footer>
+        <input class="example-leaderboard-name" type="text" id="nameInput" placeholder="Enter a name">
+        <input class="example-leaderboard-score" type="text" id="scoreInput" placeholder="Record your score..." readonly="readonly">
+      </footer>
+
+    </div>      
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script type="text/javascript" src="js/leaderboard.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+  </body>
+</html>
